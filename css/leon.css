@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.parent {
+  background-color: aqua;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* width:70%; */
+  background-color: aliceblue;
+  margin: auto;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+
+  
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header .logo {
+  width: 70px;
+}
+
+.header .links {
+  cursor: pointer;
+  position: relative;
+}
+
+.header .links .icon {
+  display: flex;
+  width: 30px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header .links .icon span {
+  background-color: black;
+  height: 2px;
+}
+
+.header .links .icon span:first-child {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.header .links .icon span:nth-child(2) {
+  margin-bottom: 5px;
+  width: 70%;
+  transition: 0.3s;
+}
+
+.header .links .icon span:nth-child(3) {
+  width: 100%;
+  /* margin-bottom: 5px; */
+}
+
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+  /* margin-bottom: 5px; */
+}
+
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 10px);
+  display: none;
+}
+
+.header .links ul::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: 5px;
+  top: -18px;
+  border: 10px solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+
+.header .links ul li a {
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  transition: 0.3s;
+  color: #333;
+}
+
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+
+.header .links ul li:not(:last-child) {
+  border-bottom: 1px solid #eae6e6;
+}
+
+.header .links:hover ul {
+  display: block;
+}
+
+
+.header .links ul li a {
+  text-decoration: none;
+  padding: 9px;
+  color: #333;
+}
